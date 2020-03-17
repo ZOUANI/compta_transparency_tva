@@ -7,7 +7,7 @@ package com.zsmart.tva.bean;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
 
@@ -61,9 +61,9 @@ public class Tva implements Serializable {
     private String referenceComptableCreateur;
 
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateValidation;
+    private Date dateValidation;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateCreation;
+    private Date dateCreation;
 
     private Integer anne;
     private Integer periode;// numero de mois ou de trim
@@ -79,7 +79,7 @@ public class Tva implements Serializable {
     private EtatTva etatTva;
 
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateSaisie;
+    private Date dateSaisie;
 
     public List<TvaFacture> getTvaFactures() {
         return tvaFactures;
@@ -220,19 +220,19 @@ public class Tva implements Serializable {
         this.referenceComptableCreateur = referenceComptableCreateur;
     }
 
-    public LocalDateTime getDateValidation() {
+    public Date getDateValidation() {
         return dateValidation;
     }
 
-    public void setDateValidation(LocalDateTime dateValidation) {
+    public void setDateValidation(Date dateValidation) {
         this.dateValidation = dateValidation;
     }
 
-    public LocalDateTime getDateCreation() {
+    public Date getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(LocalDateTime dateCreation) {
+    public void setDateCreation(Date dateCreation) {
         this.dateCreation = dateCreation;
     }
 
@@ -292,11 +292,11 @@ public class Tva implements Serializable {
         this.etatTva = etatTva;
     }
 
-    public LocalDateTime getDateSaisie() {
+    public Date getDateSaisie() {
         return dateSaisie;
     }
 
-    public void setDateSaisie(LocalDateTime dateSaisie) {
+    public void setDateSaisie(Date dateSaisie) {
         this.dateSaisie = dateSaisie;
     }
 
